@@ -3,54 +3,30 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>M.E.G. 科技氏族 - 申請表單</title>
+<title>M.E.G. 申請表單</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
   body {
     margin: 0; background: #0f172a; color: #cbd5e1; font-family: 'Orbitron', sans-serif;
-  }
-  nav {
-    background: #1e293b;
-    box-shadow: 0 0 10px #3b82f6;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  nav a {
-    color: #cbd5e1;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-  nav a:hover, nav a.active {
-    background: #3b82f6;
-    color: #0f172a;
-  }
-  main {
-    max-width: 480px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  h2 {
-    color: #3b82f6;
-    text-shadow: 0 0 8px #3b82f6;
-    text-align: center;
-    margin-bottom: 1.5rem;
+    display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 2rem;
   }
   form {
     background: #1e293b;
     border-radius: 12px;
     padding: 2rem 3rem;
+    width: 100%;
+    max-width: 480px;
     box-shadow:
       0 0 10px #3b82f6,
       0 0 40px #2563eb,
       0 0 80px #1e40af;
+    backdrop-filter: blur(10px);
+  }
+  h1 {
+    text-align: center;
+    color: #3b82f6;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 8px #3b82f6;
   }
   label {
     display: block;
@@ -65,12 +41,15 @@
     background: #0f172a;
     color: #cbd5e1;
     font-size: 1rem;
-    box-shadow: inset 0 0 5px #3b82f6;
+    box-shadow:
+      inset 0 0 5px #3b82f6;
     transition: box-shadow 0.3s ease;
   }
   input:focus, textarea:focus {
     outline: none;
-    box-shadow: 0 0 12px #60a5fa, inset 0 0 15px #3b82f6;
+    box-shadow:
+      0 0 8px #60a5fa,
+      inset 0 0 10px #3b82f6;
   }
   textarea {
     resize: vertical;
@@ -87,12 +66,14 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 0 15px #3b82f6;
+    box-shadow:
+      0 0 15px #3b82f6;
     transition: background 0.4s ease, box-shadow 0.4s ease;
   }
   button:hover {
     background: linear-gradient(90deg, #60a5fa, #3b82f6);
-    box-shadow: 0 0 25px #60a5fa;
+    box-shadow:
+      0 0 25px #60a5fa;
   }
   #result {
     margin-top: 1rem;
@@ -102,51 +83,51 @@
     text-shadow: 0 0 6px #3b82f6;
     min-height: 1.2em;
   }
+  .site-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 8px #3b82f6);
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 9999;
+  }
+  .site-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #60a5fa);
+  }
 </style>
 </head>
 <body>
-<nav>
-  <a href="index.html">主頁</a>
-  <a href="about.html">介紹</a>
-  <a href="gallery.html">圖片</a>
-  <a href="apply.html" class="active">申請表單</a>
-</nav>
-<main>
-  <h2>入隊申請表單</h2>
-  <form id="appForm" autocomplete="off">
-    <label>Roblox 帳號：
-      <input name="roblox" required autocomplete="off" />
-    </label>
-
-    <label>Discord 名稱：
-      <input name="discord" required autocomplete="off" />
-    </label>
-
-    <label>年齡：
-      <input name="age" type="number" min="1" autocomplete="off" />
-    </label>
-
-    <label>個人頁面連結：
-      <input name="profile" autocomplete="off" />
-    </label>
-
-    <label>階級：
-      <input name="rank" autocomplete="off" />
-    </label>
-
-    <label>申請理由：
-      <textarea name="reason"></textarea>
-    </label>
-
-    <label>自我介紹：
-      <textarea name="intro"></textarea>
-    </label>
-
-    <button type="submit">送出</button>
-    <p id="result"></p>
-  </form>
-</main>
-
+<form id="appForm" autocomplete="off">
+  <h1>申請表單</h1>
+  <label>Roblox 帳號：
+    <input name="roblox" required autocomplete="off" />
+  </label>
+  <label>Discord 名稱：
+    <input name="discord" required autocomplete="off" />
+  </label>
+  <label>年齡：
+    <input name="age" type="number" min="1" autocomplete="off" />
+  </label>
+  <label>個人頁面連結：
+    <input name="profile" autocomplete="off" />
+  </label>
+  <label>階級：
+    <input name="rank" autocomplete="off" />
+  </label>
+  <label>申請理由：
+    <textarea name="reason"></textarea>
+  </label>
+  <label>自我介紹：
+    <textarea name="intro"></textarea>
+  </label>
+  <button type="submit">送出</button>
+  <p id="result"></p>
+</form>
+<img src="https://i.postimg.cc/YqqLwPhn/M-E-G.png" alt="M.E.G. Logo" class="site-logo" />
 <script>
   const form = document.getElementById('appForm');
   const result = document.getElementById('result');
@@ -157,20 +138,45 @@
 
     const data = Object.fromEntries(new FormData(form));
 
+    // Discord Embed 格式物件
+    const embed = {
+      title: "新申請表單提交",
+      color: 3447003, // 藍色
+      fields: [
+        { name: "Roblox 帳號", value: data.roblox || "無", inline: true },
+        { name: "Discord 名稱", value: data.discord || "無", inline: true },
+        { name: "年齡", value: data.age || "無", inline: true },
+        { name: "個人頁面連結", value: data.profile || "無" },
+        { name: "階級", value: data.rank || "無", inline: true },
+        { name: "申請理由", value: data.reason || "無" },
+        { name: "自我介紹", value: data.intro || "無" }
+      ],
+      timestamp: new Date().toISOString(),
+      footer: {
+        text: "M.E.G. 申請系統"
+      }
+    };
+
     try {
-      const res = await fetch('/submit', {
+      const res = await fetch('https://discord.com/api/webhooks/1390151370170175619/6hLLa1AFnO7C8MPPWMSUAGdmsPoLlPfFYGPudQmiGacMrJfLEeuavGjGhy4h0CaDAEG9', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify({ embeds: [embed] })
       });
-      const text = await res.text();
-      result.textContent = text;
-      if (res.ok) form.reset();
-    } catch {
+
+      if (res.ok) {
+        result.textContent = '送出成功！謝謝您的申請';
+        form.reset();
+      } else {
+        const errText = await res.text();
+        result.textContent = `送出失敗：${res.status} ${errText}`;
+      }
+    } catch (error) {
       result.textContent = '發生錯誤，請稍後再試';
+      console.error(error);
     }
   });
 </script>
-
 </body>
 </html>
+

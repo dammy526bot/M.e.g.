@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>M.E.G. 科技氏族 - 主頁</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-    body {
-      margin: 0; font-family: 'Orbitron', sans-serif; background: #0f172a; color: #cbd5e1;
-    }
-    nav {
-      background: #1e293b;
-      box-shadow: 0 0 10px #3b82f6;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: #cbd5e1;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    nav a:hover, nav a.active {
-      background: #3b82f6;
-      color: #0f172a;
-    }
-    main {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      color: #3b82f6;
-      text-shadow: 0 0 8px #3b82f6;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-top: 1rem;
-    }
-    button {
-      background: linear-gradient(90deg, #3b82f6, #60a5fa);
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      color: #0f172a;
-      box-shadow: 0 0 15px #3b82f6;
-      transition: all 0.3s ease;
-      margin-top: 2rem;
-    }
-    button:hover {
-      background: linear-gradient(90deg, #60a5fa, #3b82f6);
-      box-shadow: 0 0 25px #60a5fa;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M.E.G. 主頁</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  body {
+    margin: 0; font-family: 'Orbitron', sans-serif; background: #0f172a; color: #cbd5e1;
+  }
+  nav {
+    background: #1e293b;
+    box-shadow: 0 0 10px #3b82f6;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav a {
+    color: #cbd5e1;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    background: #3b82f6;
+    color: #0f172a;
+  }
+  main {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3rem;
+    color: #3b82f6;
+    text-shadow: 0 0 8px #3b82f6;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+  }
+  button {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #0f172a;
+    box-shadow: 0 0 15px #3b82f6;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+  }
+  button:hover {
+    background: linear-gradient(90deg, #60a5fa, #3b82f6);
+    box-shadow: 0 0 25px #60a5fa;
+  }
+  /* 右下角固定 LOGO */
+  .site-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 8px #3b82f6);
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 9999;
+  }
+  .site-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #60a5fa);
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="index.html" class="active">主頁</a>
-    <a href="about.html">介紹</a>
-    <a href="gallery.html">圖片</a>
-    <a href="apply.html">申請表單</a>
-  </nav>
-  <main>
-    <h1>歡迎加入 M.E.G. 科技氏族</h1>
-    <p>打造最強 Roblox 與 Discord 社群，等你來挑戰！</p>
-    <button onclick="location.href='apply.html'">立即申請入隊</button>
-  </main>
+<nav>
+  <a href="index.html" class="active">主頁</a>
+  <a href="about.html">介紹</a>
+  <a href="gallery.html">圖片</a>
+  <a href="apply.html">申請表單</a>
+</nav>
+<main>
+  <h1>歡迎加入 M.E.G. 科技氏族</h1>
+  <p>打造最強 Roblox 與 Discord 社群，等你來挑戰！</p>
+  <button onclick="location.href='apply.html'">立即申請入隊</button>
+</main>
+<img src="https://i.postimg.cc/YqqLwPhn/M-E-G.png" alt="M.E.G. Logo" class="site-logo" />
 </body>
 </html>
-

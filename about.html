@@ -1,106 +1,84 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>M.E.G. 科技氏族 - 介紹</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-    body {
-      margin: 0; font-family: 'Orbitron', sans-serif; background: #0f172a; color: #cbd5e1;
-    }
-    nav {
-      background: #1e293b;
-      box-shadow: 0 0 10px #3b82f6;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: #cbd5e1;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    nav a:hover, nav a.active {
-      background: #3b82f6;
-      color: #0f172a;
-    }
-    main {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-    h2 {
-      font-size: 2.8rem;
-      color: #3b82f6;
-      text-shadow: 0 0 8px #3b82f6;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-    .icon-box {
-      background: #1e293b;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #3b82f6;
-      width: 160px;
-      text-align: center;
-    }
-    .icon-box svg {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 0.5rem;
-      fill: #3b82f6;
-    }
-    .icon-box p {
-      font-size: 1rem;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M.E.G. 介紹</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  body {
+    margin: 0; font-family: 'Orbitron', sans-serif; background: #0f172a; color: #cbd5e1;
+  }
+  nav {
+    background: #1e293b;
+    box-shadow: 0 0 10px #3b82f6;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav a {
+    color: #cbd5e1;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    background: #3b82f6;
+    color: #0f172a;
+  }
+  main {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 2.8rem;
+    color: #3b82f6;
+    text-shadow: 0 0 8px #3b82f6;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+  .site-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 8px #3b82f6);
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 9999;
+  }
+  .site-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #60a5fa);
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">主頁</a>
-    <a href="about.html" class="active">介紹</a>
-    <a href="gallery.html">圖片</a>
-    <a href="apply.html">申請表單</a>
-  </nav>
-  <main>
-    <h2>關於我們</h2>
-    <p>M.E.G. 是一個結合 Roblox 遊戲與 Discord 社群的科技氏族，致力於創造安全、有趣的遊戲環境與活躍的玩家交流平台。</p>
-    <div class="icons">
-      <div class="icon-box">
-        <!-- 遊戲手把 icon -->
-        <svg viewBox="0 0 24 24"><path d="M7 7h2v2H7V7zm6 6h2v2h-2v-2zm-4-6h2v2h-2V7zm4 0h2v2h-2V7zm-6 6h2v2H7v-2zm10-10H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg>
-        <p>優質遊戲體驗</p>
-      </div>
-      <div class="icon-box">
-        <!-- 聊天氣泡 icon -->
-        <svg viewBox="0 0 24 24"><path d="M4 4h16v12H5.17L4 17.17V4z"/></svg>
-        <p>熱絡社群交流</p>
-      </div>
-      <div class="icon-box">
-        <!-- 鎖 icon -->
-        <svg viewBox="0 0 24 24"><path d="M12 17a2 2 0 002-2v-2a2 2 0 10-4 0v2a2 2 0 002 2zm6-6h-1V7a5 5 0 00-10 0v4H6a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2z"/></svg>
-        <p>安全嚴謹管理</p>
-      </div>
-    </div>
-  </main>
+<nav>
+  <a href="index.html">主頁</a>
+  <a href="about.html" class="active">介紹</a>
+  <a href="gallery.html">圖片</a>
+  <a href="apply.html">申請表單</a>
+</nav>
+<main>
+  <h1>M.E.G.</h1>
+  <p>M.E.G. 是一個台灣氏族，在CBRN裡堅守邊境不讓一個怪物或敵人侵入</p>
+  <p>我們就缺你一個，你還在等甚麼立即加入!</p>
+</main>
+<img src="https://i.postimg.cc/YqqLwPhn/M-E-G.png" alt="M.E.G. Logo" class="site-logo" />
 </body>
 </html>
+

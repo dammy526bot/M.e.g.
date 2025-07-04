@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>M.E.G. 科技氏族 - 圖片展示</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-    body {
-      margin: 0; font-family: 'Orbitron', sans-serif; background: #0f172a; color: #cbd5e1;
-    }
-    nav {
-      background: #1e293b;
-      box-shadow: 0 0 10px #3b82f6;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: #cbd5e1;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    nav a:hover, nav a.active {
-      background: #3b82f6;
-      color: #0f172a;
-    }
-    main {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-    h2 {
-      font-size: 2.8rem;
-      color: #3b82f6;
-      text-shadow: 0 0 8px #3b82f6;
-      margin-bottom: 1.5rem;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #2563eb;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M.E.G. 圖片</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  body {
+    margin: 0; font-family: 'Orbitron', sans-serif; background: #0f172a; color: #cbd5e1;
+  }
+  nav {
+    background: #1e293b;
+    box-shadow: 0 0 10px #3b82f6;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav a {
+    color: #cbd5e1;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+    background: #3b82f6;
+    color: #0f172a;
+  }
+  main {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 1rem;
+  }
+  img.gallery-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #3b82f6;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  img.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #60a5fa;
+  }
+  .site-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 8px #3b82f6);
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 9999;
+  }
+  .site-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #60a5fa);
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">主頁</a>
-    <a href="about.html">介紹</a>
-    <a href="gallery.html" class="active">圖片</a>
-    <a href="apply.html">申請表單</a>
-  </nav>
-  <main>
-    <h2>精彩畫面</h2>
-    <div class="gallery-grid">
-      <img src="https://cdn.discordapp.com/attachments/你的頻道/圖片1.png" alt="展示圖片1" />
-      <img src="https://cdn.discordapp.com/attachments/你的頻道/圖片2.png" alt="展示圖片2" />
-      <img src="https://cdn.discordapp.com/attachments/你的頻道/圖片3.png" alt="展示圖片3" />
-      <!-- 可自行補充更多圖片 -->
-    </div>
-  </main>
+<nav>
+  <a href="index.html">主頁</a>
+  <a href="about.html">介紹</a>
+  <a href="gallery.html" class="active">圖片</a>
+  <a href="apply.html">申請表單</a>
+</nav>
+<main>
+  <img class="gallery-img" src="" alt="M.E.G. 圖片1" />
+  <img class="gallery-img" src="" alt="M.E.G. 圖片2" />
+  <img class="gallery-img" src="" alt="M.E.G. 圖片3" />
+  <img class="gallery-img" src="" alt="M.E.G. 圖片4" />
+</main>
+<img src="https://i.postimg.cc/YqqLwPhn/M-E-G.png" alt="M.E.G. Logo" class="site-logo" />
 </body>
 </html>
+
