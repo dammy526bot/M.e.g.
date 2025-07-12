@@ -103,28 +103,28 @@
 <body>
 <form id="appForm" autocomplete="off">
   <h1>申請表單</h1>
-  <label>Roblox 帳號：
+  <label>Roblox 帳號： / Roblox name:
     <input name="roblox" required autocomplete="off" />
   </label>
-  <label>Discord 名稱：
+  <label>Discord 名稱：/ Discord name:
     <input name="discord" required autocomplete="off" />
   </label>
-  <label>年齡：
+  <label>年齡：/age:
     <input name="age" type="number" min="1" autocomplete="off" />
   </label>
-  <label>個人頁面連結：
+  <label>個人頁面連結： /profile link:
     <input name="profile" autocomplete="off" />
   </label>
-  <label>階級：
+  <label>階級：/ CBRN rank:
     <input name="rank" autocomplete="off" />
   </label>
-  <label>申請理由：
+  <label>申請理由：/Apply reason
     <textarea name="reason"></textarea>
   </label>
-  <label>自我介紹：
+  <label>自我介紹：/ Self-introduction:
     <textarea name="intro"></textarea>
   </label>
-  <button type="submit">送出</button>
+  <button type="submit">送出 / submit</button>
   <p id="result"></p>
 </form>
 <img src="https://i.postimg.cc/YqqLwPhn/M-E-G.png" alt="M.E.G. Logo" class="site-logo" />
@@ -134,7 +134,7 @@
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    result.textContent = '送出中...';
+    result.textContent = '送出中... / submiting';
 
     const data = Object.fromEntries(new FormData(form));
 
@@ -165,7 +165,7 @@
       });
 
       if (res.ok) {
-        result.textContent = '送出成功！謝謝您的申請';
+        result.textContent = '送出成功！謝謝您的申請 / Thanks your apply';
         form.reset();
       } else {
         const errText = await res.text();
